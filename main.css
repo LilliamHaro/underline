@@ -39,17 +39,18 @@
 }
 
 
+/* si pero no :/ */
+/* 
 .cube-scene-container {
   width: 50vw;
   margin: 0 auto;
   overflow: hidden;
   transition: all 0.25s;
 }
-.scene {
+  .scene {
   margin: 0 -50%;
   width: 100vw;
   height: 200px;
-  /* perspective: 200px; */
   transition: all 0.s;
 }
 .cube {
@@ -70,7 +71,6 @@
   font-size: 25px;
 }
 .cube__face--front {
-  /* background: white; */
   background: rgba(0, 0, 0, 0.5); 
   color: #000;
 }
@@ -91,4 +91,51 @@
 }
 .scene:hover {
   margin: 0 auto;
+}  */
+
+ .cube-scene {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
 }
+.cube__hover{
+  width: 50vw;
+  height: 150px;
+  margin: 0 auto;
+  transition:all 0.15s ease-out;
+  text-align: center;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg);
+  color: #000;
+}
+.cube__face {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 25px;
+}
+.front {
+  /* tener el mismo color del fondo */
+  background: #fff;
+  transform: rotateY(0deg);
+}
+.bottom{
+  bottom: 0;
+  background: purple;
+  transform: rotateX(-90deg) translateZ(75px) ;
+}
+.cube__hover:hover {
+  width: 100%;
+  color: #fff;
+  transform: rotateX(90deg);
+}
+.front:hover {
+  transform: rotateY(0deg) translateY(80px);;
+} 
+
+
